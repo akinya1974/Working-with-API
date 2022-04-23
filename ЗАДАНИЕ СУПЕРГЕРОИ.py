@@ -5,7 +5,7 @@ from pprint import pprint
 
 token = "2619421814940190"
 
-ur = [
+url = [
     f'https://www.superheroapi.com/api.php/{token}/search/Hulk',
     f'https://www.superheroapi.com/api.php/{token}/search/Thanos',
     f'https://www.superheroapi.com/api.php/{token}/search/Captain%America',
@@ -19,7 +19,7 @@ def requests_get(url_all):
 
 def hero():
     super_hero = []
-    for item in requests_get(ur):
+    for item in requests_get(url):
         intelligence = item.json()
         for power in intelligence['results']:
             super_hero.append({
