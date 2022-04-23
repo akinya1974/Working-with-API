@@ -13,8 +13,8 @@ url = [
 
 
 def requests_get(url_all):
-    g = (requests.get(url) for url in url_all)
-    return g
+    get = (requests.get(url) for url in url_all)
+    return get
 
 
 def hero():
